@@ -11,7 +11,7 @@ for (let num of nums) {
   results.push(num * 2);
 };
 
-// console.log(results);
+console.log(results);
 
 // Using map() ** with visible callback function
 const multByTwo = function (num) {
@@ -22,10 +22,12 @@ const mapResults = nums.map(multByTwo);
 console.log(mapResults);
 
 // Simplified w/ map()
-
+const simplified = nums.map(function (num) { return num * 2 });
+console.log(simplified);
 
 // Simplfied w/ map() + arrow function
-
+const arrow = nums.map(num => num * 2);
+console.log(arrow);
 
 // With objects:
 const students = [
@@ -48,3 +50,6 @@ const students = [
     skill: 'CSS'
   },
 ];
+
+const studentsWithIds = students.map(student => [student.name, student.id]);
+console.log(studentsWithIds);
